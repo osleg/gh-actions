@@ -1,0 +1,5 @@
+name: "jira fixver"
+description: "Gather delta between releases and update fix version in related JIRA issues"
+runs:
+  using: "docker"
+  image: "Dockerfile"
