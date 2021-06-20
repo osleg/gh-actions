@@ -14,4 +14,4 @@ jobs:
           path: "gh-actions"
           token: ${{ github.token }}
       - name: "FixVersion"
-        uses: osleg/gh-actions@v0
+        uses: osleg/gh-actions@master
