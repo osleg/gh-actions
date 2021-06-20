@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  updateFixVer:
+    name: "UpdateFixVer"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Get git log"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          path: "gh-actions"
+          token: ${{ github.token }}
+      - name: "FixVersion"
+        uses: ./
