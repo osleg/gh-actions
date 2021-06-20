@@ -1,3 +1,3 @@
 #!/bin/sh
-pip install -r /github/workspace/requirements.txt
-python /github/workspace/update_fixV.py
+pip install -r /requirements.txt
+python /update_fixV.py
