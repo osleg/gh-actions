@@ -85,15 +85,15 @@ def update_jira_issues(jira: jira, issues: dict):
             jira.update_issue_field(k, upd)
 
 if __name__ == '__main__':
-uname = os.getenv('JIRA_USERNAME')
-token = os.getenv('JIRA_API_TOKEN')
-jira = get_jira(uname, token)
-if not uname or not token:
-    sys.exit(1)
+    uname = os.getenv('JIRA_USERNAME')
+    token = os.getenv('JIRA_API_TOKEN')
+    jira = get_jira(uname, token)
+    if not uname or not token:
+        sys.exit(1)
 
-last_tag = get_last_tag()
-log = get_glog(jira, last_tag)
+    last_tag = get_last_tag()
+    log = get_glog(jira, last_tag)
 
-issues = get_jira_issues(jira, log)
+    issues = get_jira_issues(jira, log)
 
-update_jira_issues(jira, issues)
+    update_jira_issues(jira, issues)
