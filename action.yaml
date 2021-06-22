@@ -3,3 +3,10 @@ description: "Gather delta between releases and update fix version in related JI
 runs:
   using: "docker"
   image: "Dockerfile"
+inputs:
+  jira_user:
+    description: "Jira user to use"
+    required: true
+  jira_api_token:
+    description: "JIRA user api token"
+    required: true
